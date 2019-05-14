@@ -9,7 +9,7 @@ imageView.image = anImage
 ![](image.png)
 
 ## Usage
-Make sure your call this method in background thread to not block main thread. And cache it somewhere for later use.
+Make sure your call this method in background thread to not block main thread. And cache it somewhere for later use since we don't need to decode it again.
 ```swift
 DispatchQueue.global().async {
   let image = anImage.decoded()
